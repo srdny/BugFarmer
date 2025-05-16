@@ -23,9 +23,10 @@ filtered_songs = list(filter(longer_than_five_minutes, playlist))
 
 convert_to_seconds = list(map(minutes_to_seconds, playlist))
 
-total_playtime = reduce(add_durations, playlist, 0)
+total_playtime = reduce(add_durations, filtered_songs, 0)
 
 
 print(filtered_songs) 
 print(convert_to_seconds)
-print(total_playtime)
+print(total_playtime) 
+print(playlist[0][1])
